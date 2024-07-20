@@ -1,0 +1,693 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
+    list-style: none;
+    text-decoration: none;
+}
+
+a{
+    color: #fff;
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+* {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.navbar{
+    width: 100%;
+    height: 12vh;
+    display: flex;
+    align-items: center;
+    padding: 20px 50px;
+    justify-content: space-between;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(2px) ;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    z-index: 4;
+}
+
+.navbar .logo{
+    width: 100px;
+    height: 50px;
+}
+
+.navbar .logo img{
+    width: 100%;
+}
+
+.navbar ul{
+    width: 400px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.navbar ul a{
+    color: #ef6c00;
+    font-weight: bolder;
+    transition: .3s;
+
+}
+
+.navbar ul a:hover{
+    border-bottom: 2px solid #ef6c00;
+    font-size: 14px;
+}
+
+.navbar button{
+    width: 150px;
+    height: 40px;
+    border-radius: 15px;
+    background: #129227;
+    border: none;
+    cursor: pointer;
+    transition: .3s;
+    color: aliceblue;
+}
+
+.navbar button:hover{
+    background: #4ec261;
+}
+
+.menu{
+    width: 38px;
+    height: 38px;
+    z-index: 99;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 8px;
+    background-color: #8f8f8f;
+    transition: .5s;
+    display: none;
+}
+
+.menu img{
+    width: 100%;
+    z-index: 100;
+}
+
+.menu:hover{
+    background-color: #dddddd;
+}
+
+.navbar_m{
+    width: 300px;
+    height: 100vh;
+    position: fixed;
+    justify-content: center;
+    z-index: 200;
+    background-color: #fff;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    color: #000;
+    align-items: center;
+    display: none;
+}
+
+.navbar_m a{
+    color: #000;
+    padding: 5px;
+}
+
+.navbar_m a li{
+    width: 150px;
+    height: 40px;
+    background-color: #ef6c00;
+    text-align: center;
+    transition: .4s;
+    padding: 5px;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.navbar_m a li:hover{
+    background-color: #ff9239;
+    color: #696969;
+}
+
+.navbar_m button{
+    width: 150px;
+    height: 40px;
+    border-radius: 15px;
+    background: #129227;
+    border: none;
+    cursor: pointer;
+    transition: .3s;
+    color: aliceblue;
+}
+
+.navbar_m button:hover{
+    background: #4ec261;
+}
+
+.navbar_m .cross{
+    width: 38px;
+    height: 38px;
+    position: absolute;
+    top: 4%;
+    right: 4%;
+    z-index: 99;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 8px;
+    background-color: #8f8f8f;
+    transition: .5s;
+}
+
+.navbar_m .cross img{
+    width: 100%;
+    z-index: 100;
+}
+
+.navbar_m .cross:hover{
+    background-color: #dddddd;
+}
+
+.main{
+    width: 100%;
+    height: auto;
+    background-image: url(/imgs/caselio.jpg);
+}
+
+.main .intro_img{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    height: 60vh;
+    background-image: url(/imgs/beans.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main .intro_img h1{
+    font-size: 44px;
+}
+
+.options{
+    margin-top: 50px;
+    padding: 20px 100px;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    color: #fff;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+.options .barista{
+    width: 250px;
+    height: 250px;
+    border-radius: 30px;
+    filter: brightness(.8);
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-image: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url(/imgs/barista.jpg);
+    cursor: pointer;
+    background-size: cover;
+    transition: .3s;
+}
+
+.options .barista:hover{
+    color: #ef6c00;
+}
+
+.options .retail{
+    width: 250px;
+    height: 250px;
+    border-radius: 30px;
+    filter: brightness(.8);
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-image: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url(/imgs/retail.jpg);
+    cursor: pointer;
+    background-size: cover;
+    transition: .3s;
+}
+
+.options .retail:hover{
+    color: #ef6c00;
+}
+
+.options .filter{
+    width: 250px;
+    height: 250px;
+    border-radius: 30px;
+    filter: brightness(.8);
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-image: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url(/imgs/filter.png);
+    cursor: pointer;
+    background-size: cover;
+    transition: .3s;
+}
+
+.options .filter:hover{
+    color: #ef6c00;
+}
+
+.options .vending{
+    width: 250px;
+    height: 250px;
+    border-radius: 30px;
+    filter: brightness(.8);
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-image: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url(/imgs/vending.jpg);
+    cursor: pointer;
+    background-size: cover;
+    transition: .3s;
+}
+
+.options .vending:hover{
+    color: #ef6c00;
+}
+
+.options .monosorta{
+    width: 250px;
+    height: 250px;
+    border-radius: 30px;
+    filter: brightness(.8);
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-image: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url(/imgs/monosorta.jpg);
+    cursor: pointer;
+    background-size: cover;
+    transition: .3s;
+}
+
+.options .monosorta:hover{
+    color: #ef6c00;
+}
+
+.options .molotiy{
+    width: 250px;
+    height: 250px;
+    border-radius: 30px;
+    filter: brightness(.8);
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-image: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url(/imgs/molotiy.jpg);
+    cursor: pointer;
+    background-size: cover;
+    transition: .3s;
+}
+
+.options .molotiy:hover{
+    color: #ef6c00;
+}
+
+.options .capsules{
+    width: 250px;
+    height: 250px;
+    border-radius: 30px;
+    filter: brightness(.8);
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-image: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url(/imgs/capsules.jpg);
+    cursor: pointer;
+    background-size: cover;
+    transition: .3s;
+}
+
+.options .capsules:hover{
+    color: #ef6c00;
+}
+
+.options .access{
+    width: 250px;
+    height: 250px;
+    border-radius: 30px;
+    filter: brightness(.8);
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-image: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url(/imgs/access.jpg);
+    cursor: pointer;
+    background-size: cover;
+    transition: .3s;
+}
+
+.options .access:hover{
+    color: #ef6c00;
+}
+
+.barista_line{
+    width: 100%;
+    height: auto;
+    padding: 20px 100px;
+}
+
+.barista_line .types_1{
+    margin-top: 50px;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    color: #000;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 10px;
+}
+
+.barista_line .types_1 .coffee_1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 250px;
+    height: 340px;
+}
+
+.barista_line .coffee_1 h2{
+    font-size: 20px;
+}
+
+.barista_line .coffee_1 img{
+    border-radius: 30px;
+    width: 250px;
+    height: 270px;
+}
+
+.footer {
+    background-color: #1E1E1E;
+    width: 100%;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center; 
+}
+    
+.footer .logo1 {
+    width: 200;
+    height: 30px; 
+    height: auto; 
+    overflow-y: hidden;
+}
+      
+.footer .logo1 img {
+    width: 90px;
+}
+    
+.footer ul li {
+    display: inline; 
+}
+      
+.footer ul li a {
+    text-decoration: none;
+    color: #fff;
+    margin-right: 20px;
+    font-size: 14px; 
+}
+    
+.footer .social_links {
+    display: flex;
+    padding: 5px;
+    width: 38%;
+    align-items: center;
+    justify-content: center;
+    overflow-y: hidden;
+    height: 20px; 
+}
+
+.footer .social_links a{
+    height: 20px;
+    overflow-y: hidden;
+}
+    
+.footer .social_links img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px; 
+    color: #fff;
+}
+ 
+.footer .line {
+    width: 1272px;
+    height: 1px;
+    background-color: #fff; 
+}
+
+
+.footer p {
+    color: #fff; 
+}
+
+@media only screen and (max-width:1240px){
+    .navbar ul{
+        display: none;
+    }
+
+    .navbar button{
+        display: none;
+    }
+
+    .menu{
+        display: block;
+    }
+
+    .main .barista_line{
+        padding: 10px;
+    }
+
+    .main .barista_line h1{
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+
+    .options{
+        padding: 10px;
+        grid-template-columns: auto auto auto;
+        gap: 30px;
+        height: auto;
+    }
+
+    .options .barista{
+        width: 250px;
+        height: 200px;
+    }
+
+    .options .retail{
+        width: 250px;
+        height: 200px;
+    }
+
+    .options .filter{
+        width: 250px;
+        height: 200px;
+    }
+
+    .options .vending{
+        width: 250px;
+        height: 200px;
+    }
+
+    .options .monosorta{
+        width: 250px;
+        height: 200px;
+    }
+
+    .options .molotiy{
+        width: 250px;
+        height: 200px;
+    }
+
+    .options .capsules{
+        width: 250px;
+        height: 200px;
+    }
+
+    .options .access{
+        width: 250px;
+        height: 200px;
+    }
+
+    .barista_line .types_1{
+        grid-template-columns: auto auto auto;
+        gap: 20px;
+    }
+
+}
+
+@media only screen and (max-width:800px){
+    .navbar ul{
+        display: none;
+    }
+
+    .navbar button{
+        display: none;
+    }
+
+    .menu{
+        display: block;
+    }
+
+    .main .barista_line{
+        padding: 10px;
+    }
+
+    .options{
+        padding: 10px;
+        grid-template-columns: auto auto;
+        gap: 30px;
+        height: auto;
+    }
+
+    .options .barista{
+        width: 250px;
+        height: 200px;
+    }
+
+    .options .retail{
+        width: 250px;
+        height: 200px;
+    }
+
+    .options .filter{
+        width: 250px;
+        height: 200px;
+    }
+
+    .options .vending{
+        width: 250px;
+        height: 200px;
+    }
+
+    .options .monosorta{
+        width: 250px;
+        height: 200px;
+    }
+
+    .options .molotiy{
+        width: 250px;
+        height: 200px;
+    }
+
+    .options .capsules{
+        width: 250px;
+        height: 200px;
+    }
+
+    .options .access{
+        width: 250px;
+        height: 200px;
+    }
+
+    .barista_line .types_1{
+        grid-template-columns: auto auto;
+    }
+
+}
+
+@media only screen and (max-width:700px){
+    .main{
+        flex-direction: column-reverse;
+        justify-content: space-around;
+    }
+
+    .footer .logo1{
+        height: auto;
+    }
+
+    .footer .logo1 img{
+        width: 80px;
+    }
+}
+
+@media only screen and (max-width:560px){
+
+    .options{
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        grid-template-columns: auto;
+        gap: 10px;
+        height: auto;
+    }
+
+    .options .barista{
+        width: 340px;
+        height: 300px;
+    }
+
+    .options .retail{
+        width: 340px;
+        height: 300px;
+    }
+
+    .options .filter{
+        width: 340px;
+        height: 300px;
+    }
+
+    .options .vending{
+        width: 340px;
+        height: 300px;
+    }
+
+    .options .monosorta{
+        width: 340px;
+        height: 300px;
+    }
+
+    .options .molotiy{
+        width: 340px;
+        height: 300px;
+    }
+
+    .options .capsules{
+        width: 340px;
+        height: 300px;
+    }
+
+    .options .access{
+        width: 340px;
+        height: 300px;
+    }
+
+    .barista_line .types_1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .barista_line .types_1 .coffee_1{
+        width: 400px;
+        height: 400px;
+    }
+
+    .barista_line .types_1 .coffee_1 h2{
+        font-size: 30px;
+    }
+
+    .barista_line .types_1 .coffee_1 p{
+        font-size: 18px;
+    }
+
+    .barista_line .types_1 .coffee_1 img{
+        width: 340px;
+        height: 300px;
+    }
+
+}
+
+
